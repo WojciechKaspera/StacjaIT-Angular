@@ -4,23 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ParentComponent } from './parent-component/parent.component';
 import { ChildComponent } from './child-component/child.component';
-import { InputComponent } from './input/input.component';
-import { OutputComponent } from './output/output.component';
-import { ServiceComponent } from './service/service.component';
+import { SecondChildComponent } from './second-child/second-child.component';
+import { CommunicateService } from './communicate.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ParentComponent,
     ChildComponent,
-    InputComponent,
-    OutputComponent,
-    ServiceComponent
+    SecondChildComponent,
   ],
   imports: [
     BrowserModule,
   ],
-  providers: [],
+  providers: [
+    CommunicateService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

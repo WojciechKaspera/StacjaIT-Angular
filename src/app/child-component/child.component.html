@@ -1,5 +1,2 @@
-<p>Child component:</p>
-<p>
-  The value of the child component property is: <br>
-  <b>{{childsProperty ? childsProperty : 'not defined yet'}}</b>.
-</p>
+<p>Child component (Emitting):</p>
+<input type="text" #myInput (keyup)="onKeyUp($event, myInput)">

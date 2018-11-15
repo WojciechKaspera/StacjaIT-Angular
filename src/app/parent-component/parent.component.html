@@ -1,4 +1,5 @@
-  <p>Parent component</p>
-  <input type="text" #myInput (keyup)="parentsProperty = myInput.value" placeholder="Talk to your child!">
-  <hr>
-  <app-child [childsProperty]="parentsProperty"></app-child>
+  <div class="box">
+      <app-child></app-child>
+      <hr>
+      <app-second-child></app-second-child>
+  </div>

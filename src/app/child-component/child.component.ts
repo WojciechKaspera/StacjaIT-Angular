@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Input } from '@angular/core';
+import { CommunicateService } from '../communicate.service';
 
 @Component({
   selector: 'app-child',
@@ -7,10 +8,14 @@ import { Component, OnInit, EventEmitter, Input } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  constructor() { }
+  constructor(private communicateService: CommunicateService) { }
 
-  @Input()
-  childsProperty = '';
+  onKeyUp(keyEvent, input) {
+    if (keyEvent.keyCode === 13) {
+      this.communicateService.sendMessage(input.value);
+      input.value = '';
+    }
+  }
 
   ngOnInit() {
   }
