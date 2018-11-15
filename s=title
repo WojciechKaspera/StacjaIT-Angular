@@ -1,0 +1,17 @@
+[33mcommit 21dc828d3986158a2ae55db28f04ef0cc49c8a09[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/output[m[33m, [m[1;32moutput[m[33m)[m
+Author: Wojciech Kaspera <wojciech.kaspera@gmail.com>
+Date:   Thu Nov 15 12:20:02 2018 +0100
+
+    output communication
+
+[33mcommit f1f1bf7cb57a7eb3321890c6153989a72ad7ecdf[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Wojciech Kaspera <wojciech.kaspera@gmail.com>
+Date:   Thu Nov 15 01:12:37 2018 +0100
+
+    directives and binding
+
+[33mcommit 24e27b81c8e515520617220307ecf3fe604dc1c0[m
+Author: Wojciech Kaspera <wojciech.kaspera@gmail.com>
+Date:   Wed Nov 14 07:53:56 2018 +0100
+
+    initial commit
