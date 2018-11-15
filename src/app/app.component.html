@@ -1,8 +1,10 @@
-<div class="container">
-            <p class="title">
-                    Components communication: <br>
-                   Sibling compontents talking to each other through the service.
-            </p>
-            <hr>
-            <app-parent></app-parent>
-</div>
+<app-header></app-header>
+        <div class="container">
+                <section class="main-section">
+                        <app-search></app-search>
+                        <app-board></app-board>
+                </section>
+                <section class="summary-section">
+                        <app-summary></app-summary>
+                </section>
+        </div>

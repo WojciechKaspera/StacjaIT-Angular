@@ -1,0 +1,19 @@
+<section class="board-section">
+  <p class="board-title">
+    Chosen drinks:
+  </p>
+    <ul class="board-drink-list">
+      <p *ngIf="!chosenDrinks?.length">No drinks chosen yet.</p>
+      <li class="board-drink-item" *ngFor="let drink of chosenDrinks">
+            <p class="board-drink-name">{{drink?.name}}</p>
+            <div class="drink-quantity-box">
+                <p class="drink-quantity">{{drink?.quantity}}</p>        
+                <div class="quantity-change-box">
+                <img src="../../assets/plus.png" class="drink-quantity-img" (click)="increaseQuantity(drink)">
+                <img src="../../assets/minus.png" class="drink-quantity-img" (click)="decreaseQuantity(drink)">
+              </div>
+            </div>
+      </li>
+    </ul>
+    <button class="btn btn-wide">Sum up!</button>
+  </section>

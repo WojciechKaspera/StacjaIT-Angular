@@ -1,0 +1,43 @@
+.header-section {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #d1ba9b;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.header-menu-box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.header-menu-box:hover {
+    cursor: pointer;
+}
+
+.header-menu {
+    position: absolute;
+    top: -300px;
+}
+
+.burger-img {
+    width: 100%;
+}
+
+.header-title {
+    font-size: 28px;
+    margin: 0;
+    color: 	#32373c;
+}

@@ -1,0 +1,65 @@
+.board-section {
+    width: 100%;
+    height: 100%;
+    background: #d9cfb1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.board-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.board-drink-list {
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;;
+    list-style-type: none;
+}
+
+.board-drink-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.board-drink-name {
+    margin: 0;
+    font-weight: bold;
+}
+
+.drink-quantity-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drink-quantity {
+    font-weight: bold;
+    margin: 0;
+}
+
+.quantity-change-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.drink-quantity-img {
+    width: 20px;
+    height: 20px;
+}
+
+.drink-quantity-img:hover {
+    cursor: pointer;
+}
