@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+.container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: flex-start
+}
+
+.container:last-of-type {
+    margin-bottom: 400px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}

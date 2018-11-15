@@ -1,20 +1,66 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+  <p class="title">Interpolation</p>
+  {{awesomeVariable}} <br>
+  {{awesomeVariable2}}
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<hr>
+<div class="container">
+  <p class="title">Event binding</p>
+  <button (click)="onClick()">Click me!</button>
+  <input type="text" (keyup)="onKeyUp($event)" placeholder="I am using event binding!">
+</div>
+<hr>
+<div class="container">
+  <p class="title">Template reference variables</p>
+  <input type="text" (keyup)="onKeyUp2(myLovelyInput.value)" #myLovelyInput placeholder="I use template reference variables!">
+</div>
+<hr>
+<div class="container">
+  <p class="title">Attribute binding</p>
+  <select #myLovelySelect (change)="chosenColor = myLovelySelect.value">
+    <option value="red" selected>red</option>
+    <option value="green">green</option>
+    <option value="blue">blue</option>
+  </select>
+  <div class="example-div" [style.backgroundColor]="chosenColor"></div>
+</div>
+<hr>
+<div class="container">
+  <p class="title">ngIf</p>
+  <button (click)="ngIfVariable = !ngIfVariable">Change the element visibility!</button>
+  <div class="example-div" *ngIf="ngIfVariable"></div>
+</div>
+<hr>
+<div class="container">
+  <p class="title">ngClass</p>
+  <select #myOtherLovelySelect (change)="ngClassVariable = myOtherLovelySelect.value">
+    <option value="small" selected>small</option>
+    <option value="medium">medium</option>
+    <option value="large">large</option>
+  </select>
+  <div class="example-div" [ngClass]="ngClassVariable"></div>
+</div>
+<hr>
+<div class="container">
+  <p class="title">ngFor</p>
+  <ol>
+    <li *ngFor="let element of ngForArray, let index">{{element}}</li>
+  </ol>
+</div>
+<hr>
+<div class="container">
+  <p class="title">ngSwitch</p>
+  <select #yetAnotherLovelySelect (change)="ngSwitchVariable = yetAnotherLovelySelect.value">
+      <option value="" disabled selected>Select your warzywo</option>
+      <option value="burak">burak</option>
+      <option value="cebula">cebula</option>
+      <option value="ziemniak">ziemniak</option>
+    </select>
+  <div [ngSwitch]="ngSwitchVariable">
+    <ng-template [ngSwitchCase]="'burak'">Wybranym warzywem jest burak</ng-template>
+    <ng-template [ngSwitchCase]="'cebula'">Wybranym warzywem jest cebula</ng-template>
+    <ng-template [ngSwitchCase]="'ziemniak'">Wybranym warzywem jest ziemniak</ng-template>
+    <ng-template ngSwitchDefault>Nie wybrano żadnego warzywa</ng-template>
+  </div>
+</div>
 
