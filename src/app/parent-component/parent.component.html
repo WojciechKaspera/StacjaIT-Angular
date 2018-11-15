@@ -1,0 +1,8 @@
+<div class="container">
+    <app-child (chooseAnimal)="img = $event"></app-child>
+  <div class="img-box" *ngIf="img.url">
+      <img src="{{img?.url}}" class="animal-img">
+      <p>Image from: {{img?.source}}</p>
+  </div>
+</div>
+

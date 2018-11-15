@@ -1,66 +1,8 @@
 <div class="container">
-  <p class="title">Interpolation</p>
-  {{awesomeVariable}} <br>
-  {{awesomeVariable2}}
+            <p class="title">
+                    Components communication: <br>
+                    Child talking to his parent.
+            </p>
+            <hr>
+            <app-parent></app-parent>
 </div>
-<hr>
-<div class="container">
-  <p class="title">Event binding</p>
-  <button (click)="onClick()">Click me!</button>
-  <input type="text" (keyup)="onKeyUp($event)" placeholder="I am using event binding!">
-</div>
-<hr>
-<div class="container">
-  <p class="title">Template reference variables</p>
-  <input type="text" (keyup)="onKeyUp2(myLovelyInput.value)" #myLovelyInput placeholder="I use template reference variables!">
-</div>
-<hr>
-<div class="container">
-  <p class="title">Attribute binding</p>
-  <select #myLovelySelect (change)="chosenColor = myLovelySelect.value">
-    <option value="red" selected>red</option>
-    <option value="green">green</option>
-    <option value="blue">blue</option>
-  </select>
-  <div class="example-div" [style.backgroundColor]="chosenColor"></div>
-</div>
-<hr>
-<div class="container">
-  <p class="title">ngIf</p>
-  <button (click)="ngIfVariable = !ngIfVariable">Change the element visibility!</button>
-  <div class="example-div" *ngIf="ngIfVariable"></div>
-</div>
-<hr>
-<div class="container">
-  <p class="title">ngClass</p>
-  <select #myOtherLovelySelect (change)="ngClassVariable = myOtherLovelySelect.value">
-    <option value="small" selected>small</option>
-    <option value="medium">medium</option>
-    <option value="large">large</option>
-  </select>
-  <div class="example-div" [ngClass]="ngClassVariable"></div>
-</div>
-<hr>
-<div class="container">
-  <p class="title">ngFor</p>
-  <ol>
-    <li *ngFor="let element of ngForArray, let index">{{element}}</li>
-  </ol>
-</div>
-<hr>
-<div class="container">
-  <p class="title">ngSwitch</p>
-  <select #yetAnotherLovelySelect (change)="ngSwitchVariable = yetAnotherLovelySelect.value">
-      <option value="" disabled selected>Select your warzywo</option>
-      <option value="burak">burak</option>
-      <option value="cebula">cebula</option>
-      <option value="ziemniak">ziemniak</option>
-    </select>
-  <div [ngSwitch]="ngSwitchVariable">
-    <ng-template [ngSwitchCase]="'burak'">Wybranym warzywem jest burak</ng-template>
-    <ng-template [ngSwitchCase]="'cebula'">Wybranym warzywem jest cebula</ng-template>
-    <ng-template [ngSwitchCase]="'ziemniak'">Wybranym warzywem jest ziemniak</ng-template>
-    <ng-template ngSwitchDefault>Nie wybrano żadnego warzywa</ng-template>
-  </div>
-</div>
-
