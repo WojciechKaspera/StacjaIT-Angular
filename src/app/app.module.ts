@@ -7,9 +7,9 @@ import { ChildComponent } from './child-component/child.component';
 import { SecondChildComponent } from './second-child/second-child.component';
 import { CommunicateService } from './communicate.service';
 
-@NgModule({
+@NgModule({ 
   declarations: [
-    AppComponent,
+    AppComponent, 
     ParentComponent,
     ChildComponent,
     SecondChildComponent,
