@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BoardService } from '../board.service';
+import { DataProviderService } from '../data-provider.service';
 
 @Component({
   selector: 'app-drink-list',
@@ -8,12 +9,9 @@ import { BoardService } from '../board.service';
 })
 export class DrinkListComponent implements OnInit {
 
-  constructor(private boardService: BoardService) { }
+  constructor(private boardService: BoardService, private dataProvider: DataProviderService) { }
 
-  drinkList = [
-    {name: 'Tequilla Sunrise', ingredients: [{name: 'Tequilla', volume: 40, pricePerUnit: 0.11, ethanolPercentage: 40}, {name: 'Orange juice', volume: 100, pricePerUnit: 0.005}], imgSrc: 'https://www.thecocktaildb.com/images/media/drink/jfvyog1530108909.jpg'},
-    {name: 'Gin & Tonic', ingredients: [{name: 'Gin', volume: 50, pricePerUnit: 0.07, ethanolPercentage: 40}, {name: 'Tonic', volume: 100, pricePerUnit: 0.006}], imgSrc: 'https://www.thecocktaildb.com/images/media/drink/jfvyog1530108909.jpg'}  
-  ];
+  drinkList = [];
 
   addDrink(drinkName) {
     this.drinkList.map(drink => {
@@ -24,6 +22,7 @@ export class DrinkListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.drinkList = this.dataProvider.getDrinkList();
   }
 
 }
