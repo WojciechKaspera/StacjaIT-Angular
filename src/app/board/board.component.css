@@ -16,14 +16,26 @@
     margin: 0;
 }
 
+.board-list-wrapper {
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .board-drink-list {
     width: 100%;
     margin: 0;
     padding: 0 10px;;
     list-style-type: none;
+    box-sizing: border-box;
 }
 
 .board-drink-item {
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;

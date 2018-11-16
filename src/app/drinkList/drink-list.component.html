@@ -1,0 +1,17 @@
+<section class="drinkList-section">
+    <p class="drinkList-title">
+        List of avalaible drinks:
+    </p>
+  <div class="drinkList-box">
+      <ul class="drinkList-list">
+          <li class="drinkList-item" *ngFor="let drink of drinkList">
+            <div class="drinkList-description">
+                <p class="drinkList-name">{{drink?.name}}</p>
+                <span class="drinkList-ingredients" *ngFor="let ingredient of drink?.ingredients, let index = index">{{ingredient.name}}{{index === (result?.ingredients.length-1) ? '.' : ', '}}</span>
+            </div>
+            <img src="{{drink?.imgSrc}}" class="drinkList-image">
+            <img src="../../assets/plus.png" class="add-image" (click)="addDrink(drink.name)">
+          </li>
+        </ul>
+  </div>
+</section>

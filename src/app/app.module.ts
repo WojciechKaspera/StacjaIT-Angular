@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { SearchComponent } from './search/search.component';
+import { DrinkListComponent } from './drinkList/drink-list.component';
 import { BoardComponent } from './board/board.component';
 import { SummaryComponent } from './summary/summary.component';
 
@@ -11,7 +11,7 @@ import { SummaryComponent } from './summary/summary.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchComponent,
+    DrinkListComponent,
     BoardComponent,
     SummaryComponent,
   ],

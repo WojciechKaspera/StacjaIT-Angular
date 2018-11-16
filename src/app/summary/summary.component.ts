@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BoardService } from '../board.service';
+import { CalculatorService } from '../calculator.service';
 
 @Component({
   selector: 'app-summary',
@@ -7,38 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
-  cost = 500;
-  ethanolMass = 200;
+  constructor(private boardService: BoardService, private calculatorService: CalculatorService) { }
+
+  showSummary = false;
+  cost = '';
+  ethanolMass = '';
   lethalDose = 500;
-  // gestosc alkoholu 0.789
-
-  drinkList = ['5 x tequilla sunrise', '2x vodka with tonic'];
-  ingredients = [
-    {
-      id: 'tequilla',
-    fullName: 'Tequilla',
-    volume: 500
-  },
-  {
-    id: 'orangeJuice',
-    fullName: 'Orange juice',
-    volume: 500
-  },
-  {
-    id: 'vodka',
-    fullName: 'Vodka',
-    volume: 200
-  },
-  {
-    id: 'limon',
-    fullName: 'Limon',
-    quantity: 5
-  }
-  ];
-
-  constructor() { }
+  drinkList = '';
+  ingredients = [];
 
   ngOnInit() {
+    this.boardService.summaryEmmiter.subscribe(chosenDrinks => {
+      this.showSummary = true;
+      this.drinkList = this.calculatorService.getDrinkList(chosenDrinks);
+      this.ingredients = this.calculatorService.calculateIngredients(chosenDrinks);
+      this.cost = this.calculatorService.calculateCost(this.ingredients);
+      this.ethanolMass = this.calculatorService.calculateEthanolMass(this.ingredients);
+    });
   }
 
 }

@@ -1,20 +1,20 @@
-<section class="summary-section">
-  <p class="summary-title">Summary:</p>
-  <p class="summary-text">
-    To prepare: {{drinkList.join(', ')}} you will need: <br>
-  </p>
-  <ul>
-    <li *ngFor="let ingredient of ingredients">
-        {{ingredient.volume ? ingredient.volume+' ml of '+ingredient.fullName : ''}}
-        {{ingredient.mass ? ingredient.mass+' g of '+ingredient.fullName : ''}}
-        {{ingredient.quantity ? ingredient.quantity+ ' x '+ingredient.fullName : ''}}
-    </li>
-  </ul>
-  <p class="summary-text">
-    which will cost you approximately: {{cost}}$.
-  </p>
-  <p class="summary-text">
-    Total amount of alcohol in prepared coctails will be aproximately {{ethanolMass}}, which is equal to ~{{ethanolMass/lethalDose}} of lethal dose. <br>
-    Have fun!
-  </p>
-</section>
+  <div class="wrapper" *ngIf="showSummary">
+      <p class="summary-title">Summary:</p>
+      <p class="summary-text">
+        To prepare: {{drinkList}} you will need: <br>
+      </p>
+      <ul>
+        <li *ngFor="let ingredient of ingredients">
+            {{ingredient.volume ? ingredient.volume+' ml of '+ingredient.name : ''}}
+            {{ingredient.mass ? ingredient.mass+' g of '+ingredient.name : ''}}
+            {{ingredient.quantity ? ingredient.quantity+ ' x '+ingredient.name : ''}}
+        </li>
+      </ul>
+      <p class="summary-text">
+        which will cost you approximately: {{cost}} zł.
+      </p>
+      <p class="summary-text">
+        Total amount of alcohol in prepared coctails will be aproximately {{ethanolMass}}, which is equal to ~{{ethanolMass/lethalDose}} of lethal dose. <br>
+        Have fun!
+      </p>
+  </div>
