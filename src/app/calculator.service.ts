@@ -8,7 +8,7 @@ export class CalculatorService {
   // returns the string with the amount of each drink
   getDrinkList(chosenDrinks) {
     let drinkList = '';
-    chosenDrinks.forEach(chosenDrink => {
+    chosenDrinks.forEach((chosenDrink, index) => {
       drinkList += (`${chosenDrink.quantity} x ${chosenDrink.name}, `);
     })
     return drinkList;
