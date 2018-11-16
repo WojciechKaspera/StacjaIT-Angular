@@ -7,7 +7,7 @@ import { BoardService } from '../board.service';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-
+ 
   constructor(private boardService: BoardService) { }
 
   chosenDrinks = [];

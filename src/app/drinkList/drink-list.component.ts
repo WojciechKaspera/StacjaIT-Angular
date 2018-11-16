@@ -13,12 +13,8 @@ export class DrinkListComponent implements OnInit {
 
   drinkList = [];
 
-  addDrink(drinkName) {
-    this.drinkList.map(drink => {
-      if (drink.name === drinkName) {
+  addDrink(drink) {
         this.boardService.addDrink(drink);
-      }
-    });
   }
 
   ngOnInit() {

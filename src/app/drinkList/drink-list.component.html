@@ -10,7 +10,7 @@
                 <span class="drinkList-ingredients" *ngFor="let ingredient of drink?.ingredients, let i = index">{{ingredient.name}}{{i === (drink?.ingredients.length-1) ? '.' : ', '}}</span>
             </div>
             <img src="{{drink?.imgSrc}}" class="drinkList-image">
-            <img src="../../assets/plus.png" class="add-image" (click)="addDrink(drink.name)">
+            <img src="../../assets/plus.png" class="add-image" (click)="addDrink(drink)">
           </li>
         </ul>
   </div>
